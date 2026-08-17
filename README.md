@@ -162,6 +162,3 @@ The analysis produced several notable observations:
 | Google Colab | Development environment |
 | Jupyter Notebook | Analysis documentation |
 
-
-├── requirements.txt
-└── LICENSE
