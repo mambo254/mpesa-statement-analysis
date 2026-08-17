@@ -6,9 +6,6 @@ This project presents an exploratory data analysis (EDA) of personal M-Pesa tran
 
 The objective is to analyse transaction behaviour, spending patterns, transaction frequency, recipient activity, transaction costs, and changes in financial activity over time.
 
-The project follows an end-to-end data analytics workflow:
-
-**Data Collection → Data Cleaning → Feature Engineering → Exploratory Data Analysis → Visualization → Insight Generation**
 
 The analysis was conducted using Python and is documented in a Jupyter Notebook developed in Google Colab.
 
@@ -30,81 +27,63 @@ The project seeks to answer the following questions:
 - What patterns can be identified from the transaction history?
 
 ---
-
 ## Dataset
 
-The dataset was derived from personal Safaricom M-Pesa statements covering **September 2024 to May 2026**.
+The dataset used in this project was obtained from my personal **Safaricom M-Pesa transaction statement**, covering transactions from **September 2024 to May 2026**.
 
-The original statement contained fields including:
+### Obtaining the M-Pesa Statement
 
-- Completion Time
-- Transaction Status
-- Paid In
-- Withdrawn
-- Balance
-- Transaction Type
-- Details
+The transaction statement was obtained directly from my Safaricom M-Pesa account using the **\*334#** USSD service.
 
-The raw data was processed and transformed into an analysis-ready dataset.
+The process was:
 
-### Data Privacy
+1. Access the M-Pesa menu using **\*334#** on my Safaricom line.
+2. Navigate to the option for requesting/downloading an **M-Pesa statement**.
+3. Select the required transaction period, covering **September 2024 to May 2026**.
+4. Request the statement and download the resulting statement, which was provided in **PDF format**.
 
-Because the dataset contains personal financial information, sensitive identifiers and personally identifiable information should be removed or anonymized before publishing the dataset publicly.
+### Converting the Statement to a Usable Dataset
 
----
+Since the PDF format was not convenient for data analysis, I converted the statement into an Excel-compatible format using **iLovePDF's PDF-to-Excel conversion tool**.
 
-## Data Preparation
+The converted Excel file was then reviewed and prepared for analysis before being imported into Python.
 
-The raw M-Pesa statement was prepared for analysis through several cleaning and transformation steps.
+### Original Dataset Structure
 
-### Data Cleaning
+The original dataset contained transaction-level information such as:
 
-The following operations were performed:
-
-- Removed unnecessary columns
-- Removed the `Unnamed: 7` column
-- Handled missing values
-- Converted monetary fields to numeric data types
-- Converted withdrawal values to positive values for expenditure analysis
-- Converted transaction timestamps to datetime format
-- Standardized transaction information
-- Prepared the dataset for aggregation and visualization
-
-The original transaction direction was retained using the `Paid In`, `Withdrawn`, and `Transaction_Type` fields.
-
----
-
-## Feature Engineering
-
-Additional variables were derived from the transaction timestamp to support temporal analysis.
-
-| Feature | Description |
+| Column | Description |
 |---|---|
-| `Completion_Time` | Standardized transaction timestamp |
-| `Date` | Transaction date |
-| `Time` | Transaction time |
-| `Year` | Transaction year |
-| `Month Name` | Transaction month |
-| `Year-Month` | Combined month and year |
-| `Hour` | Hour of transaction |
-| `Time_Period` | Time-of-day classification |
+| Completion Time | Date and time when the transaction was completed |
+| Transaction Status | Status of the transaction |
+| Paid In | Amount received into the M-Pesa account |
+| Withdrawn | Amount withdrawn or spent |
+| Balance | M-Pesa account balance after the transaction |
+| Transaction Type | Category/type of transaction |
+| Details | Detailed description of the transaction |
 
-### Time-of-Day Classification
+An unnecessary column contained in the converted dataset was removed during the cleaning process.
 
-Transactions were grouped into four periods:
+### Data Cleaning and Preparation
 
-| Period | Time Range |
-|---|---|
-| Midnight | 00:00 – 05:59 |
-| Morning | 06:00 – 11:59 |
-| Afternoon | 12:00 – 17:59 |
-| Evening | 18:00 – 23:59 |
+Before analysis, the dataset was cleaned and transformed using Python and Pandas. The main preparation steps included:
 
-This feature was used to determine the most active period for M-Pesa transactions.
+- Removing unnecessary columns
+- Handling missing values
+- Converting transaction amounts to numeric values
+- Converting negative withdrawal values to positive values for expenditure analysis
+- Converting `Completion Time` into a proper datetime format
+- Extracting the transaction date and time
+- Creating year and month variables
+- Creating a `Year-Month` variable for monthly analysis
+- Extracting the transaction hour
+- Classifying transactions into different time-of-day periods
+
+The resulting dataset was then used for the exploratory data analysis and visualizations presented in this project.
+
+> **Privacy:** The M-Pesa statement used in this analysis is my personal financial data.**The original statement is not included in this public repository**.
 
 ---
-
-# Exploratory Data Analysis
 
 ## 1. Financial Summary
 
@@ -138,6 +117,7 @@ The analysis considered categories including:
 - Other transaction categories
 
 The results were visualized using interactive Plotly charts to facilitate comparison between transaction categories.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f2cb9f5-ce51-4dcd-9ac0-65c6484537bf" />
 
 ---
 
