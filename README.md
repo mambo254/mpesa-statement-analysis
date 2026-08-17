@@ -5,11 +5,7 @@
 This project presents an exploratory data analysis (EDA) of personal M-Pesa transaction records covering the period from **September 2024 to May 2026**.
 
 The objective is to analyse transaction behaviour, spending patterns, transaction frequency, recipient activity, transaction costs, and changes in financial activity over time.
-
-
 The analysis was conducted using Python and is documented in a Jupyter Notebook developed in Google Colab.
-
----
 
 ## Dataset
 
@@ -51,7 +47,6 @@ An unnecessary column contained in the converted dataset was removed during the 
 
 **Privacy:** The M-Pesa statement used in this analysis is my personal financial data.**The original statement is not included in this public repository**.
 
----
 
 ## Financial Summary
 
@@ -66,7 +61,6 @@ These figures represent transaction flows recorded in the M-Pesa statement and s
 
 The difference can partly be explained by transactions involving linked bank accounts and other movements of funds between financial accounts.
 
----
 
 ## Spending by Transaction Type
 
@@ -87,8 +81,6 @@ The analysis considered categories including:
 The results were visualized using interactive Plotly charts to facilitate comparison between transaction categories.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a13b044b-83e4-4886-bebc-33446fd4e514" />
 
-
----
 
 ## Monthly Spending Analysis
 
@@ -155,10 +147,6 @@ The analysis produced several notable observations:
 - A relatively small number of recipients accounted for a significant proportion of outgoing transaction value.
 - Transaction charges accumulated over the analysis period.
 - Temporal analysis revealed changes in transaction behaviour across months and times of day.
-
-
-
-
 
 # Tools and Technologies
 
