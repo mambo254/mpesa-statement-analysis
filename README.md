@@ -11,22 +11,6 @@ The analysis was conducted using Python and is documented in a Jupyter Notebook 
 
 ---
 
-## Objectives
-
-The project seeks to answer the following questions:
-
-- How much money was recorded as received during the analysis period?
-- How much money was recorded as withdrawn?
-- Which transaction types account for the largest share of outgoing transactions?
-- Which months recorded the highest and lowest spending?
-- What was the highest-spending day?
-- On which day was the largest amount received?
-- Which recipients received the largest total amounts?
-- When during the day are transactions most frequent?
-- What were the estimated M-Pesa transaction costs?
-- What patterns can be identified from the transaction history?
-
----
 ## Dataset
 
 The dataset used in this project was obtained from my personal **Safaricom M-Pesa transaction statement**, covering transactions from **September 2024 to May 2026**.
@@ -64,28 +48,12 @@ The original dataset contained transaction-level information such as:
 
 An unnecessary column contained in the converted dataset was removed during the cleaning process.
 
-### Data Cleaning and Preparation
 
-Before analysis, the dataset was cleaned and transformed using Python and Pandas. The main preparation steps included:
-
-- Removing unnecessary columns
-- Handling missing values
-- Converting transaction amounts to numeric values
-- Converting negative withdrawal values to positive values for expenditure analysis
-- Converting `Completion Time` into a proper datetime format
-- Extracting the transaction date and time
-- Creating year and month variables
-- Creating a `Year-Month` variable for monthly analysis
-- Extracting the transaction hour
-- Classifying transactions into different time-of-day periods
-
-The resulting dataset was then used for the exploratory data analysis and visualizations presented in this project.
-
-> **Privacy:** The M-Pesa statement used in this analysis is my personal financial data.**The original statement is not included in this public repository**.
+**Privacy:** The M-Pesa statement used in this analysis is my personal financial data.**The original statement is not included in this public repository**.
 
 ---
 
-## 1. Financial Summary
+## Financial Summary
 
 The analysis calculated the total value of transactions recorded as incoming and outgoing during the study period.
 
@@ -100,7 +68,7 @@ The difference can partly be explained by transactions involving linked bank acc
 
 ---
 
-## 2. Spending by Transaction Type
+## Spending by Transaction Type
 
 Outgoing transactions were grouped by transaction type to determine which categories accounted for the largest amounts.
 
@@ -122,7 +90,7 @@ The results were visualized using interactive Plotly charts to facilitate compar
 
 ---
 
-## 3. Monthly Spending Analysis
+## Monthly Spending Analysis
 
 Monthly withdrawals were aggregated using the `Year-Month` feature.
 
@@ -143,8 +111,7 @@ Spending subsequently showed a more gradual upward pattern during the latter par
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2ced92ee-35ff-414a-b204-f076634c97ee" />
 
 
----
-## 5. Top Recipients Analysis
+## Top Recipients Analysis
 
 Recipient information was extracted from transaction descriptions using **Regular Expressions (Regex)**.
 
@@ -156,10 +123,8 @@ The resulting recipient-level dataset was used to calculate:
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6adc5639-8fae-4552-9f7e-42576ce2b635" />
 
 
----
 
-
-## 7. Time-of-Day Transaction Analysis
+## Time-of-Day Transaction Analysis
 
 A total of **8,290 transactions** were analysed according to time of day.
 
@@ -176,7 +141,6 @@ A total of **8,290 transactions** were analysed according to time of day.
 
 This indicates that transaction activity was concentrated more heavily during the evening than during the other three periods.
 
----
 
 # Key Findings
 
@@ -192,27 +156,9 @@ The analysis produced several notable observations:
 - Transaction charges accumulated over the analysis period.
 - Temporal analysis revealed changes in transaction behaviour across months and times of day.
 
----
 
-# Visualizations
 
-The project includes a combination of static and interactive visualizations.
 
-Key visualizations include:
-
-- Spending by Transaction Type
-- Monthly Spending Trend
-- Daily Spending Trend
-- Top 10 Recipients
-- Time-of-Day Transaction Activity
-- Transaction Cost Analysis
-- Highest Spending Day
-- Largest Amount Received
-- Spending Distribution
-
-Interactive Plotly visualizations allow individual values and categories to be explored directly from the charts.
-
----
 
 # Tools and Technologies
 
@@ -228,27 +174,6 @@ Interactive Plotly visualizations allow individual values and categories to be e
 | Google Colab | Development environment |
 | Jupyter Notebook | Analysis documentation |
 
----
 
-# Project Structure
-
-```text
-mpesa-statement-analysis/
-│
-├── data/
-│   ├── mpesa.csv
-│   └── cleaned_mpesa.csv
-│
-├── notebook/
-│   └── mpesa_analysis.ipynb
-│
-├── images/
-│   ├── spending_categories.png
-│   ├── monthly_spending.png
-│   ├── daily_spending.png
-│   ├── top_recipients.png
-│   └── transaction_time.png
-│
-├── README.md
 ├── requirements.txt
 └── LICENSE
