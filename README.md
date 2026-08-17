@@ -117,7 +117,8 @@ The analysis considered categories including:
 - Other transaction categories
 
 The results were visualized using interactive Plotly charts to facilitate comparison between transaction categories.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0f2cb9f5-ce51-4dcd-9ac0-65c6484537bf" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a13b044b-83e4-4886-bebc-33446fd4e514" />
+
 
 ---
 
@@ -140,6 +141,8 @@ Monthly analysis was used to identify:
 A significant increase in withdrawals was observed during **January and February 2025**, followed by a substantial decline in March 2025.
 
 Spending subsequently showed a more gradual upward pattern during the latter part of 2025 and the first five months of 2026.
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2ced92ee-35ff-414a-b204-f076634c97ee" />
+
 
 ---
 
@@ -167,6 +170,7 @@ The resulting recipient-level dataset was used to calculate:
 - Total amount sent to each recipient
 - Number of transactions per recipient
 - Top recipients by total amount sent
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6adc5639-8fae-4552-9f7e-42576ce2b635" />
 
 ### Highest Recipient by Total Amount
 
