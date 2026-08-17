@@ -128,7 +128,6 @@ Monthly withdrawals were aggregated using the `Year-Month` feature.
 
 The analysis covers:
 
-**September 2024 – May 2026**
 
 Monthly analysis was used to identify:
 
@@ -145,22 +144,6 @@ Spending subsequently showed a more gradual upward pattern during the latter par
 
 
 ---
-
-## 4. Daily Transaction Analysis
-
-Daily transaction values were aggregated to identify significant transaction days.
-
-The analysis identifies:
-
-- Highest-spending day
-- Amount spent on the highest-spending day
-- Largest amount received on a single day
-- Daily spending patterns
-
-Daily analysis provides a more granular perspective than monthly aggregation and helps identify individual periods of unusually high financial activity.
-
----
-
 ## 5. Top Recipients Analysis
 
 Recipient information was extracted from transaction descriptions using **Regular Expressions (Regex)**.
@@ -172,32 +155,9 @@ The resulting recipient-level dataset was used to calculate:
 - Top recipients by total amount sent
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6adc5639-8fae-4552-9f7e-42576ce2b635" />
 
-### Highest Recipient by Total Amount
-
-The analysis identified:
-
-**Ali Abdul — KES 127,099.96**
-
-across **671 transactions**.
-
-This analysis also demonstrates the difference between transaction frequency and transaction value. A recipient with a high number of transactions does not necessarily receive the largest individual payments.
 
 ---
 
-## 6. Transaction Cost Analysis
-
-Transaction costs were estimated using the applicable M-Pesa tariff structure.
-
-The analysis examined:
-
-- Number of chargeable transactions
-- Monthly transaction costs
-- Annual transaction costs
-- Average transaction cost per day
-
-This provides an estimate of the cumulative cost associated with transaction activity during the study period.
-
----
 
 ## 7. Time-of-Day Transaction Analysis
 
