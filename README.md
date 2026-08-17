@@ -121,6 +121,7 @@ The resulting recipient-level dataset was used to calculate:
 A total of **8,290 transactions** were analysed according to time of day.
 
 | Time Period | Number of Transactions |
+|---|---|
 
 | Evening | 4,477 |
 | Afternoon | 1,735 |
